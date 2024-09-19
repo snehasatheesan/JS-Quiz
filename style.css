@@ -1,37 +1,43 @@
-/* General styles */
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(to right, #e0eafc, #cfdef3); /* Soft blue gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
-/* Quiz container */
+/* Quiz Container */
 .quiz-container {
     width: 80%;
     max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 15px;
+    background: linear-gradient(to right, #f9f9f9, #e8e8e8); /* Light grey gradient for the container */
+    padding: 30px;
+    border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: #333; /* Soft dark text color */
 }
 
 /* Header */
 h1 {
-    font-size: 24px;
-    color: #343a40;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: #4a4a4a; /* Slightly muted dark gray */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
 }
 
-/* Question and options */
+/* Questions and Options */
 h2 {
-    font-size: 20px;
-    color: #495057;
+    font-size: 22px;
+    color: #5a5a5a;
+    font-weight: 600;
 }
 
 ul {
@@ -40,11 +46,20 @@ ul {
 }
 
 li {
-    margin: 10px 0;
-    font-size: 16px;
+    margin: 12px 0;
+    font-size: 18px;
+    background-color: #dfe6e9; /* Soft light grey for options */
+    padding: 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: #333;
+    cursor: pointer;
 }
 
-/* Input and labels */
+li:hover {
+    background-color: #b2bec3; /* Slightly darker grey on hover */
+}
+
 input[type="radio"] {
     margin-right: 10px;
 }
@@ -56,71 +71,94 @@ label {
 /* Buttons */
 button {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #74b9ff; /* Calm soft blue */
     color: white;
-    padding: 10px 20px;
-    margin: 20px 10px;
+    padding: 14px 24px;
+    margin: 30px 15px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 25px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #a6dcef; /* Slightly brighter soft blue on hover */
+    transform: scale(1.02); /* Subtle hover effect */
 }
 
 button:disabled {
-    background-color: #cccccc;
+    background-color: #dfe6e9; /* Muted grey when disabled */
     cursor: not-allowed;
 }
 
-/* Score and leaderboard */
+/* Score */
 #score-container {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #28a745;
+    margin-top: 25px;
+    font-size: 22px;
+    color: #6c5ce7; /* Calm purple for the score */
+    font-weight: bold;
 }
 
+/* Leaderboard */
 #leaderboard-container {
     margin-top: 40px;
     text-align: left;
 }
 
 #leaderboard-container h2 {
-    font-size: 22px;
-    color: #6c757d;
+    font-size: 24px;
+    color: #636e72; /* Muted dark grey */
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 #leaderboard {
-    background-color: #f1f3f5;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: #f0f0f0; /* Very light grey for leaderboard background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
 }
 
 #leaderboard table {
     width: 100%;
     border-collapse: collapse;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
 }
 
 #leaderboard th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    border-bottom: 1px solid #ccc; /* Light grey borders */
 }
 
 #leaderboard th {
-    background-color: #007bff;
+    background-color: #74b9ff; /* Soft blue table header */
     color: white;
 }
 
 #leaderboard td {
-    color: #343a40;
+    color: #333;
 }
 
 #leaderboard tr:hover {
-    background-color: #f8f9fa;
+    background-color: #dfe6e9; /* Light grey hover effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quiz-container, #leaderboard {
+    animation: fadeIn 0.5s ease-in-out;
 }
