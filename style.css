@@ -1,0 +1,126 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Quiz container */
+.quiz-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Question and options */
+h2 {
+    font-size: 20px;
+    color: #495057;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Input and labels */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Score and leaderboard */
+#score-container {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #28a745;
+}
+
+#leaderboard-container {
+    margin-top: 40px;
+    text-align: left;
+}
+
+#leaderboard-container h2 {
+    font-size: 22px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+#leaderboard {
+    background-color: #f1f3f5;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#leaderboard th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#leaderboard th {
+    background-color: #007bff;
+    color: white;
+}
+
+#leaderboard td {
+    color: #343a40;
+}
+
+#leaderboard tr:hover {
+    background-color: #f8f9fa;
+}
